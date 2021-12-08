@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+
+    <title>sample-app</title>
+  </head>
+  <body>
+    <h1>sample-app</h1>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+
+    <button type="button" class="btn btn-link">Link</button>
+    <div class="container">
+      <div class="row">
+        <div class="col-6" style="background-color: red">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">田中太郎</h5>
+              <div class="kaiwa line">
+                <div class="name">おなまえ</div>
+                <div class="fukidasi left">
+                  <img class="icon" src="1.png" alt="avatar" />LINE風です。
+                </div>
+                <div class="fukidasi left">
+                  続けて喋るとフキダシのしっぽはつきません。
+                </div>
+                <div class="fukidasi right">HTMLとCSSでできます。</div>
+                <div class="fukidasi right">
+                  続けても、しっぽをつけたいときは間にbrを入れます。
+                </div>
+              </div>
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="メッセージを入力してください"
+                />
+                <button
+                  class="btn btn-outline-secondary js-send-message"
+                  type="button"
+                >
+                  メッセージ送信
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6" style="background-color: blue">aiueo</div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".js-send-message").on("click", function () {
+          let message = $(this)
+            .closest(".input-group")
+            .find("input[type=text]")
+            .val();
+          if (message === "") {
+            return;
+          }
+          $appendElement = $("<div>").addClass("fukidasi right").text(message);
+          $(".kaiwa.line").append($appendElement);
+        });
+      });
+    </script>
+  </body>
+</html>
