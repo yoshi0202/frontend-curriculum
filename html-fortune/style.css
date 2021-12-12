@@ -1,0 +1,29 @@
+h1 {
+  margin: 5%;
+}
+h2 {
+  margin: 5%;
+}
+
+.result {
+  margin-top: 200px;
+  display: none;
+}
+
+div.row .radius {
+  height:300px;
+  width:300px;
+  margin: auto;
+}
+
+div.row .radius.money {
+  border-color: yellow !important;
+}
+
+div.row .radius.work {
+  border-color: green !important;
+}
+
+div.row .radius.health {
+  border-color: aqua !important;
+}
