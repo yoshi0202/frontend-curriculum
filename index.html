@@ -18,19 +18,9 @@
   </head>
   <body>
     <h1>sample-app</h1>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-light">Light</button>
-    <button type="button" class="btn btn-dark">Dark</button>
-
-    <button type="button" class="btn btn-link">Link</button>
     <div class="container">
       <div class="row">
-        <div class="col-6" style="background-color: red">
+        <div class="col-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">田中太郎</h5>
@@ -63,7 +53,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6" style="background-color: blue">aiueo</div>
+        <div class="col-6"></div>
       </div>
     </div>
 
@@ -85,6 +75,7 @@
           }
           $appendElement = $("<div>").addClass("fukidasi right").text(message);
           $(".kaiwa.line").append($appendElement);
+          $(this).closest(".input-group").find("input[type=text]").val("");
         });
       });
     </script>

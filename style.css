@@ -4,12 +4,13 @@ LINE風フキダシ
 /*フレームとフォント*/
 .kaiwa.line {
     width: 100%;
+    height: 500px;
     margin: 0 auto;
     padding: 10px 0;
     background: #769ece;
     color: #333;
     line-height: 1.4;
-    overflow: hidden;
+    overflow: scroll;
 }
 /*フキダシ共通*/
 .kaiwa.line .fukidasi {
